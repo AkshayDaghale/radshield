@@ -1,0 +1,35 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.ipynb_checkpoints/
+docx_text.txt
+pdf_text.txt
+make_notebooks.py
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*
+*secret*
+
+# Python environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+
+# Local development files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Large generated artifacts
+.ipynb_checkpoints/
+radshield/data/archive*/

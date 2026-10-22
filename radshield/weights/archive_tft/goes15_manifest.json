@@ -1,0 +1,115 @@
+{
+  "status": "research_evaluation_only",
+  "satellite": "GOES-15",
+  "random_seed": 42,
+  "target_source": "GOES15_EPEAD-SCIENCE-ELECTRONS-E13EW_1MIN",
+  "target_variable": "E2W_COR_FLUX",
+  "target_definition": "GOES EPEAD E2 integral electron flux >2 MeV, corrected for background, contamination, and dead time",
+  "target_units": "electrons/(cm^2 s sr)",
+  "target_quality_rule": "Only E2W_DQF == 0, finite, positive observed flux is admitted. Missing target windows are omitted, never filled.",
+  "predictor_source": "NASA SPDF CDAWeb OMNI_HRO_5MIN, time-shifted to the bow-shock nose; direct WIND SWE/MFI CDF files are archived alongside it.",
+  "predictor_quality_policy": "CDF fill values are converted to missing; incomplete windows are excluded without interpolation.",
+  "feature_columns": [
+    "log_electron_flux",
+    "BY_GSM",
+    "BZ_GSM",
+    "flow_speed",
+    "proton_density",
+    "Pressure",
+    "AE_INDEX",
+    "SYM_H",
+    "log_flux_lag_1h",
+    "log_flux_lag_3h"
+  ],
+  "input_steps": 288,
+  "output_steps": 144,
+  "sample_interval_minutes": 5,
+  "quantiles": [
+    0.1,
+    0.25,
+    0.5,
+    0.75,
+    0.9
+  ],
+  "architecture": {
+    "num_features": 10,
+    "hidden_size": 32,
+    "lstm_layers": 1,
+    "num_quantiles": 5,
+    "dropout": 0.1
+  },
+  "chronological_split": {
+    "train_end_row": 675964,
+    "validation_end_row": 820814,
+    "total_rows": 965664,
+    "first_timestamp_utc": "2010-03-26T00:00:00+00:00",
+    "last_timestamp_utc": "2020-03-04T23:55:00+00:00",
+    "training_windows": 191,
+    "validation_windows": 182,
+    "test_windows": 102,
+    "window_stride_rows": 12
+  },
+  "provenance": {
+    "archive_manifest": "archive_manifest.json",
+    "archive_manifest_sha256": "19a89c8598a162d51d57f6d84291d407352dc3090c2f2497b363482859fee949",
+    "prepared_dataset": "prepared/goes15.csv",
+    "prepared_dataset_sha256": "c7bb1612a89f90df76fae11f1606a7b832e77855846be6ea29411e227cbf3d36",
+    "training_script_sha256": "383762224e3c1000027c019bfd33c8f306d38863e7aabbc3ae6ed6994900d436"
+  },
+  "epochs": [
+    {
+      "epoch": 1,
+      "train_pinball_loss": 7.527330071514189,
+      "validation_pinball_loss": 8.096733915936817
+    },
+    {
+      "epoch": 2,
+      "train_pinball_loss": 6.5067495201270615,
+      "validation_pinball_loss": 7.063322580777681
+    },
+    {
+      "epoch": 3,
+      "train_pinball_loss": 5.426423265047722,
+      "validation_pinball_loss": 5.931012069785988
+    }
+  ],
+  "held_out_test_metrics": {
+    "window_count": 102,
+    "horizons": {
+      "30m": {
+        "mae_log10_pfu": 1.4950202703475952,
+        "persistence_mae_log10_pfu": 0.07611635327339172,
+        "p10_to_p90_coverage": 0.0392156862745098,
+        "median_predicted_flux_pfu": 71.17648315429688,
+        "median_observed_flux_pfu": 749.0203247070312
+      },
+      "6h": {
+        "mae_log10_pfu": 2.601524829864502,
+        "persistence_mae_log10_pfu": 0.4465600550174713,
+        "p10_to_p90_coverage": 0.0,
+        "median_predicted_flux_pfu": 6.3063859939575195,
+        "median_observed_flux_pfu": 1150.619873046875
+      },
+      "12h": {
+        "mae_log10_pfu": 1.9208320379257202,
+        "persistence_mae_log10_pfu": 0.5784072875976562,
+        "p10_to_p90_coverage": 0.0784313725490196,
+        "median_predicted_flux_pfu": 31.79243278503418,
+        "median_observed_flux_pfu": 1351.5802001953125
+      }
+    }
+  },
+  "artifacts": {
+    "checkpoint": "goes15_tft.pth",
+    "checkpoint_sha256": "793a92ad8ae7d5e97c25712ddd3b509ab6997fbcd318eb8e7ce7dc099db94339",
+    "scaler": "goes15_scaler.npz",
+    "scaler_sha256": "a0a29418e6a96163d44b1e936786fa51e1ec6e7251892ea0382b9f20d19bc364"
+  },
+  "device": "cpu",
+  "limitations": [
+    "Hourly training windows overlap substantially; held-out metrics are not independent event samples.",
+    "This model is satellite-specific and has not been validated against GSAT-19/GRASP measurements.",
+    "Held-out historical performance is not a forecast-operations safety approval.",
+    "GOES mission changes and source coverage must be assessed before deployment to another spacecraft."
+  ]
+}

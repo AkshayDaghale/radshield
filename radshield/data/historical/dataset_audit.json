@@ -1,0 +1,1510 @@
+{
+  "report_version": 1,
+  "audit_policy": "Read-only local CSV inspection. No resampling, interpolation, filling, timezone conversion, or target repair is performed. Negative values are counted but not treated as invalid without field-specific rules.",
+  "dataset_files_found": 4,
+  "datasets": [
+    {
+      "path": "DataSets/Kaggle_FineTuning_Dataset.csv",
+      "file_size_bytes": 10049741,
+      "format": "CSV",
+      "row_count": 122976,
+      "column_names": [
+        "datetime",
+        "BY",
+        "BZ",
+        "V",
+        "Density",
+        "AE",
+        "SYM_H",
+        "Electron_Flux",
+        "ULF_Power"
+      ],
+      "timestamps": {
+        "timestamp_column": "datetime",
+        "parse_failures": 0,
+        "timezone_status": "naive_timezone_unspecified",
+        "timezone_assumption": "No timezone conversion or UTC assumption applied.",
+        "chronological_in_input_order": true,
+        "duplicate_timestamp_rows": 0,
+        "first_timestamp": "2017-07-01T00:00:00",
+        "last_timestamp": "2018-08-31T23:55:00",
+        "valid_timestamp_rows": 122976,
+        "expected_cadence_minutes_for_diagnostic_only": 5.0,
+        "interval_count": 122975,
+        "interval_minutes_counts": {
+          "5.0": 122975
+        },
+        "non_expected_interval_count": 0,
+        "gap_over_expected_count": 0,
+        "missing_expected_slots_from_exact_multiple_gaps": 0
+      },
+      "columns": {
+        "datetime": {
+          "dtype_in_csv_reader": "str",
+          "numeric_checks_applicable": false,
+          "missing_values": 0,
+          "numeric_parse_failures": null,
+          "nonfinite_numeric_values": null,
+          "negative_numeric_values_not_assumed_invalid": null,
+          "zero_numeric_values": null,
+          "minimum_finite_numeric_value": null,
+          "maximum_finite_numeric_value": null,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "BY": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 57246,
+          "zero_numeric_values": 143,
+          "minimum_finite_numeric_value": -17.38,
+          "maximum_finite_numeric_value": 9999.99,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {
+            "9999.99": 4902
+          }
+        },
+        "BZ": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 63339,
+          "zero_numeric_values": 184,
+          "minimum_finite_numeric_value": -31.09,
+          "maximum_finite_numeric_value": 9999.99,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {
+            "9999.99": 4902
+          }
+        },
+        "V": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 268.6,
+          "maximum_finite_numeric_value": 99999.9,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {
+            "99999.9": 9702
+          }
+        },
+        "Density": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 0.29,
+          "maximum_finite_numeric_value": 999.99,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {
+            "999.99": 9702
+          }
+        },
+        "AE": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 3.0,
+          "maximum_finite_numeric_value": 2351.0,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {
+            "999.0": 8,
+            "99.0": 366
+          }
+        },
+        "SYM_H": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 86591,
+          "zero_numeric_values": 3597,
+          "minimum_finite_numeric_value": -205.0,
+          "maximum_finite_numeric_value": 78.0,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "Electron_Flux": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 1166,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 1.1538,
+          "maximum_finite_numeric_value": 5864.2149,
+          "nonpositive_values_in_raw_target": 0,
+          "script_sentinel_candidates_present": {}
+        },
+        "ULF_Power": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 121458,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": -7.184886501013381,
+          "maximum_finite_numeric_value": 5.23240520264363,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        }
+      },
+      "raw_target_columns": {
+        "Electron_Flux": {
+          "present": true,
+          "missing_values": 1166,
+          "nonpositive_values": 0
+        }
+      },
+      "timestamp_column": "datetime"
+    },
+    {
+      "path": "DataSets/Kaggle_Validation_March2015.csv",
+      "file_size_bytes": 1449943,
+      "format": "CSV",
+      "row_count": 7530,
+      "column_names": [
+        "datetime",
+        "electron_flux",
+        "Bz_GSM",
+        "Flow_Speed",
+        "Proton_Density",
+        "Temperature",
+        "Flow_Pressure",
+        "flux_t-1h",
+        "flux_t-3h",
+        "flux_t-24h",
+        "log_electron_flux",
+        "log_flux_t-1h",
+        "log_flux_t-3h",
+        "log_flux_t-24h",
+        "ULF_Power"
+      ],
+      "timestamps": {
+        "timestamp_column": "datetime",
+        "parse_failures": 0,
+        "timezone_status": "naive_timezone_unspecified",
+        "timezone_assumption": "No timezone conversion or UTC assumption applied.",
+        "chronological_in_input_order": true,
+        "duplicate_timestamp_rows": 0,
+        "first_timestamp": "2015-03-01T00:00:00",
+        "last_timestamp": "2015-03-31T23:55:00",
+        "valid_timestamp_rows": 7530,
+        "expected_cadence_minutes_for_diagnostic_only": 5.0,
+        "interval_count": 7529,
+        "interval_minutes_counts": {
+          "5.0": 7231,
+          "10.0": 166,
+          "15.0": 41,
+          "20.0": 26,
+          "25.0": 13,
+          "30.0": 11,
+          "35.0": 2,
+          "40.0": 5,
+          "45.0": 6,
+          "50.0": 1,
+          "55.0": 4,
+          "60.0": 2,
+          "65.0": 1,
+          "70.0": 3,
+          "75.0": 1,
+          "90.0": 2,
+          "95.0": 2,
+          "105.0": 2,
+          "110.0": 1,
+          "115.0": 1,
+          "130.0": 1,
+          "165.0": 1,
+          "220.0": 1,
+          "270.0": 1,
+          "400.0": 1,
+          "420.0": 1,
+          "580.0": 1,
+          "760.0": 1
+        },
+        "non_expected_interval_count": 298,
+        "gap_over_expected_count": 298,
+        "missing_expected_slots_from_exact_multiple_gaps": 1398
+      },
+      "columns": {
+        "datetime": {
+          "dtype_in_csv_reader": "str",
+          "numeric_checks_applicable": false,
+          "missing_values": 0,
+          "numeric_parse_failures": null,
+          "nonfinite_numeric_values": null,
+          "negative_numeric_values_not_assumed_invalid": null,
+          "zero_numeric_values": null,
+          "minimum_finite_numeric_value": null,
+          "maximum_finite_numeric_value": null,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "electron_flux": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 9.823848724365234,
+          "maximum_finite_numeric_value": 69910.0,
+          "nonpositive_values_in_raw_target": 0,
+          "script_sentinel_candidates_present": {}
+        },
+        "Bz_GSM": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 3273,
+          "zero_numeric_values": 9,
+          "minimum_finite_numeric_value": -24.74,
+          "maximum_finite_numeric_value": 26.81,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "Flow_Speed": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 296.4,
+          "maximum_finite_numeric_value": 712.0,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "Proton_Density": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 1.46,
+          "maximum_finite_numeric_value": 48.59,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "Temperature": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 8510.0,
+          "maximum_finite_numeric_value": 1200060.0,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "Flow_Pressure": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 0.61,
+          "maximum_finite_numeric_value": 29.05,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "flux_t-1h": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 9.823848724365234,
+          "maximum_finite_numeric_value": 69910.0,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "flux_t-3h": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 9.823848724365234,
+          "maximum_finite_numeric_value": 68308.0,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "flux_t-24h": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 11.043354988098145,
+          "maximum_finite_numeric_value": 69910.0,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "log_electron_flux": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 0.9922816662279496,
+          "maximum_finite_numeric_value": 4.844539302129008,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "log_flux_t-1h": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 0.9922816662279496,
+          "maximum_finite_numeric_value": 4.844539302129008,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "log_flux_t-3h": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 0.9922816662279496,
+          "maximum_finite_numeric_value": 4.834471569748808,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "log_flux_t-24h": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 1.0431010327652837,
+          "maximum_finite_numeric_value": 4.844539302129008,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "ULF_Power": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 7205,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": -5.103754349829998,
+          "maximum_finite_numeric_value": 1.480033750880299,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        }
+      },
+      "raw_target_columns": {
+        "electron_flux": {
+          "present": true,
+          "missing_values": 0,
+          "nonpositive_values": 0
+        }
+      },
+      "timestamp_column": "datetime"
+    },
+    {
+      "path": "radshield/data/historical/may_2024_benchmark.csv",
+      "file_size_bytes": 318956,
+      "format": "CSV",
+      "row_count": 1153,
+      "column_names": [
+        "datetime",
+        "BX_GSM",
+        "BY_GSM",
+        "BZ_GSM",
+        "Vsw",
+        "Np",
+        "AE",
+        "flux",
+        "BT",
+        "Pdyn",
+        "Ec",
+        "KP",
+        "DST",
+        "dDst_dt",
+        "AE_1h",
+        "ULF_power",
+        "Bz_neg_dur",
+        "log_flux",
+        "regime",
+        "F10.7_index",
+        "goes_Hp",
+        "flux_lag_1h",
+        "flux_lag_3h",
+        "flux_lag_6h",
+        "flux_lag_12h",
+        "flux_lag_24h"
+      ],
+      "timestamps": {
+        "timestamp_column": "datetime",
+        "parse_failures": 0,
+        "timezone_status": "naive_timezone_unspecified",
+        "timezone_assumption": "No timezone conversion or UTC assumption applied.",
+        "chronological_in_input_order": true,
+        "duplicate_timestamp_rows": 0,
+        "first_timestamp": "2024-05-10T00:00:00",
+        "last_timestamp": "2024-05-14T00:00:00",
+        "valid_timestamp_rows": 1153,
+        "expected_cadence_minutes_for_diagnostic_only": 5.0,
+        "interval_count": 1152,
+        "interval_minutes_counts": {
+          "5.0": 1152
+        },
+        "non_expected_interval_count": 0,
+        "gap_over_expected_count": 0,
+        "missing_expected_slots_from_exact_multiple_gaps": 0
+      },
+      "columns": {
+        "datetime": {
+          "dtype_in_csv_reader": "str",
+          "numeric_checks_applicable": false,
+          "missing_values": 0,
+          "numeric_parse_failures": null,
+          "nonfinite_numeric_values": null,
+          "negative_numeric_values_not_assumed_invalid": null,
+          "zero_numeric_values": null,
+          "minimum_finite_numeric_value": null,
+          "maximum_finite_numeric_value": null,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "BX_GSM": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 730,
+          "zero_numeric_values": 1,
+          "minimum_finite_numeric_value": -32.66,
+          "maximum_finite_numeric_value": 15.42,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "BY_GSM": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 378,
+          "zero_numeric_values": 2,
+          "minimum_finite_numeric_value": -63.1,
+          "maximum_finite_numeric_value": 68.78,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "BZ_GSM": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 525,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": -44.3,
+          "maximum_finite_numeric_value": 43.27,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "Vsw": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 401.0,
+          "maximum_finite_numeric_value": 1023.3,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "Np": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 0.79,
+          "maximum_finite_numeric_value": 999.99,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {
+            "999.99": 170
+          }
+        },
+        "AE": {
+          "dtype_in_csv_reader": "int64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 42.0,
+          "maximum_finite_numeric_value": 3540.0,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {
+            "999.0": 1,
+            "99.0": 4
+          }
+        },
+        "flux": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 1.0,
+          "maximum_finite_numeric_value": 634.2951965332031,
+          "nonpositive_values_in_raw_target": 0,
+          "script_sentinel_candidates_present": {}
+        },
+        "BT": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 1.3085106037017813,
+          "maximum_finite_numeric_value": 69.9303832393331,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "Pdyn": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 0.86,
+          "maximum_finite_numeric_value": 99.99,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {
+            "99.99": 170
+          }
+        },
+        "Ec": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 2,
+          "minimum_finite_numeric_value": 0.0,
+          "maximum_finite_numeric_value": 38.81773053407121,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "KP": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 2.136,
+          "maximum_finite_numeric_value": 9.0,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "DST": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 1153,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": -87.94228602862441,
+          "maximum_finite_numeric_value": -19.120423013902048,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "dDst_dt": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 608,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": -1.5,
+          "maximum_finite_numeric_value": 1.5,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "AE_1h": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 54.583333333333336,
+          "maximum_finite_numeric_value": 2033.3333333333333,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "ULF_power": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 205,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": -2.895,
+          "maximum_finite_numeric_value": 1.0,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "Bz_neg_dur": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 73,
+          "minimum_finite_numeric_value": 0.0,
+          "maximum_finite_numeric_value": 465.0,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "log_flux": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 389,
+          "minimum_finite_numeric_value": 0.0,
+          "maximum_finite_numeric_value": 2.8022914225325373,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "regime": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 156,
+          "minimum_finite_numeric_value": 0.0,
+          "maximum_finite_numeric_value": 3.0,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "F10.7_index": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 150.0,
+          "maximum_finite_numeric_value": 150.0,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "goes_Hp": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 100.0,
+          "maximum_finite_numeric_value": 100.0,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "flux_lag_1h": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 401,
+          "minimum_finite_numeric_value": 0.0,
+          "maximum_finite_numeric_value": 2.8022914225325373,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "flux_lag_3h": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 425,
+          "minimum_finite_numeric_value": 0.0,
+          "maximum_finite_numeric_value": 2.8022914225325373,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "flux_lag_6h": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 461,
+          "minimum_finite_numeric_value": 0.0,
+          "maximum_finite_numeric_value": 2.8022914225325373,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "flux_lag_12h": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 533,
+          "minimum_finite_numeric_value": 0.0,
+          "maximum_finite_numeric_value": 2.564783326668478,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "flux_lag_24h": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 651,
+          "minimum_finite_numeric_value": 0.0,
+          "maximum_finite_numeric_value": 2.1764700809334774,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        }
+      },
+      "raw_target_columns": {
+        "flux": {
+          "present": true,
+          "missing_values": 0,
+          "nonpositive_values": 0
+        }
+      },
+      "timestamp_column": "datetime"
+    },
+    {
+      "path": "radshield/data/historical/oct_2024_benchmark.csv",
+      "file_size_bytes": 334386,
+      "format": "CSV",
+      "row_count": 1153,
+      "column_names": [
+        "datetime",
+        "BX_GSM",
+        "BY_GSM",
+        "BZ_GSM",
+        "Vsw",
+        "Np",
+        "AE",
+        "flux",
+        "BT",
+        "Pdyn",
+        "Ec",
+        "KP",
+        "DST",
+        "dDst_dt",
+        "AE_1h",
+        "ULF_power",
+        "Bz_neg_dur",
+        "log_flux",
+        "regime",
+        "F10.7_index",
+        "goes_Hp",
+        "flux_lag_1h",
+        "flux_lag_3h",
+        "flux_lag_6h",
+        "flux_lag_12h",
+        "flux_lag_24h"
+      ],
+      "timestamps": {
+        "timestamp_column": "datetime",
+        "parse_failures": 0,
+        "timezone_status": "naive_timezone_unspecified",
+        "timezone_assumption": "No timezone conversion or UTC assumption applied.",
+        "chronological_in_input_order": true,
+        "duplicate_timestamp_rows": 0,
+        "first_timestamp": "2024-10-09T00:00:00",
+        "last_timestamp": "2024-10-13T00:00:00",
+        "valid_timestamp_rows": 1153,
+        "expected_cadence_minutes_for_diagnostic_only": 5.0,
+        "interval_count": 1152,
+        "interval_minutes_counts": {
+          "5.0": 1152
+        },
+        "non_expected_interval_count": 0,
+        "gap_over_expected_count": 0,
+        "missing_expected_slots_from_exact_multiple_gaps": 0
+      },
+      "columns": {
+        "datetime": {
+          "dtype_in_csv_reader": "str",
+          "numeric_checks_applicable": false,
+          "missing_values": 0,
+          "numeric_parse_failures": null,
+          "nonfinite_numeric_values": null,
+          "negative_numeric_values_not_assumed_invalid": null,
+          "zero_numeric_values": null,
+          "minimum_finite_numeric_value": null,
+          "maximum_finite_numeric_value": null,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "BX_GSM": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 648,
+          "zero_numeric_values": 1,
+          "minimum_finite_numeric_value": -30.04,
+          "maximum_finite_numeric_value": 23.06,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "BY_GSM": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 588,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": -33.11,
+          "maximum_finite_numeric_value": 35.41,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "BZ_GSM": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 651,
+          "zero_numeric_values": 1,
+          "minimum_finite_numeric_value": -46.24,
+          "maximum_finite_numeric_value": 15.38,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "Vsw": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 377.1,
+          "maximum_finite_numeric_value": 810.4,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "Np": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 0.32,
+          "maximum_finite_numeric_value": 999.99,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {
+            "999.99": 41
+          }
+        },
+        "AE": {
+          "dtype_in_csv_reader": "int64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 31.0,
+          "maximum_finite_numeric_value": 3997.0,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {
+            "99.0": 2
+          }
+        },
+        "flux": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 1.0,
+          "maximum_finite_numeric_value": 737.4078063964844,
+          "nonpositive_values_in_raw_target": 0,
+          "script_sentinel_candidates_present": {}
+        },
+        "BT": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 0.3940812099047606,
+          "maximum_finite_numeric_value": 47.61099557875261,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "Pdyn": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 0.17,
+          "maximum_finite_numeric_value": 99.99,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {
+            "99.99": 41
+          }
+        },
+        "Ec": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 5.334554944806978e-06,
+          "maximum_finite_numeric_value": 32.140686430116894,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "KP": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 1.935,
+          "maximum_finite_numeric_value": 9.0,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "DST": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 1153,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": -87.94228634059944,
+          "maximum_finite_numeric_value": -18.625436888926664,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "dDst_dt": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 601,
+          "zero_numeric_values": 35,
+          "minimum_finite_numeric_value": -1.5,
+          "maximum_finite_numeric_value": 1.5,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "AE_1h": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 39.75,
+          "maximum_finite_numeric_value": 2840.25,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {
+            "99.0": 1
+          }
+        },
+        "ULF_power": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 389,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": -3.979999999999999,
+          "maximum_finite_numeric_value": 1.0,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "Bz_neg_dur": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 88,
+          "minimum_finite_numeric_value": 0.0,
+          "maximum_finite_numeric_value": 820.0,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "log_flux": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 270,
+          "minimum_finite_numeric_value": 0.0,
+          "maximum_finite_numeric_value": 2.867707730852104,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "regime": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 248,
+          "minimum_finite_numeric_value": 0.0,
+          "maximum_finite_numeric_value": 3.0,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "F10.7_index": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 150.0,
+          "maximum_finite_numeric_value": 150.0,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "goes_Hp": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 0,
+          "minimum_finite_numeric_value": 100.0,
+          "maximum_finite_numeric_value": 100.0,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "flux_lag_1h": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 282,
+          "minimum_finite_numeric_value": 0.0,
+          "maximum_finite_numeric_value": 2.867707730852104,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "flux_lag_3h": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 306,
+          "minimum_finite_numeric_value": 0.0,
+          "maximum_finite_numeric_value": 2.867707730852104,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "flux_lag_6h": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 342,
+          "minimum_finite_numeric_value": 0.0,
+          "maximum_finite_numeric_value": 2.867707730852104,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "flux_lag_12h": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 414,
+          "minimum_finite_numeric_value": 0.0,
+          "maximum_finite_numeric_value": 2.867707730852104,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        },
+        "flux_lag_24h": {
+          "dtype_in_csv_reader": "float64",
+          "numeric_checks_applicable": true,
+          "missing_values": 0,
+          "numeric_parse_failures": 0,
+          "nonfinite_numeric_values": 0,
+          "negative_numeric_values_not_assumed_invalid": 0,
+          "zero_numeric_values": 511,
+          "minimum_finite_numeric_value": 0.0,
+          "maximum_finite_numeric_value": 2.867707730852104,
+          "nonpositive_values_in_raw_target": null,
+          "script_sentinel_candidates_present": {}
+        }
+      },
+      "raw_target_columns": {
+        "flux": {
+          "present": true,
+          "missing_values": 0,
+          "nonpositive_values": 0
+        }
+      },
+      "timestamp_column": "datetime"
+    }
+  ],
+  "target_semantics": {
+    "candidate_raw_target_columns": [
+      "Electron_Flux",
+      "electron_flux",
+      "flux"
+    ],
+    "electron_flux_target_definition": "The 2017-18 file contains Electron_Flux and 1,166 blank entries. The training scripts log-transform this column, but the CSV has no data dictionary, instrument/channel definition, units, source identifier, or missing-value explanation. Project code uses pfu for electron flux generally, but that does not verify this file's target units or measurement semantics.",
+    "unit_status": "Dataset-level units are undocumented. The Kaggle training script comments that Density is cm^-3 and V is km/s when calculating Pdyn; this script comment does not establish the source file's metadata. Other column units and target units are unverified.",
+    "missing_target_policy": "Keep missing raw targets missing; never interpolate or fill.",
+    "units_and_provenance_by_dataset": {
+      "DataSets/Kaggle_FineTuning_Dataset.csv": {
+        "Electron_Flux": "Not documented in this CSV; source, energy channel and units are unverified.",
+        "V": "The Kaggle training script assumes km/s when deriving Pdyn; not verified by file metadata.",
+        "Density": "The Kaggle training script assumes cm^-3 when deriving Pdyn; not verified by file metadata.",
+        "BY, BZ, AE, SYM_H, ULF_Power": "No dataset-level units/source metadata found."
+      },
+      "DataSets/Kaggle_Validation_March2015.csv": {
+        "electron_flux, log_electron_flux": "No dataset-level units/source metadata found; physical flux source and log convention are not established for this file.",
+        "Flow_Speed, Proton_Density, Flow_Pressure, Bz_GSM, ULF_Power": "Training-script naming or formula assumptions exist, but this CSV has no data dictionary confirming units or source."
+      },
+      "radshield/data/historical/may_2024_benchmark.csv": {
+        "flux": "The local benchmark extraction script labels its flux floor in pfu; this stored series is clipped and rolling-median smoothed, and is not raw direct observation.",
+        "log_flux": "Derived log10 of the clipped/smoothed flux series; not a raw observation.",
+        "other_columns": "Units/source fields are not documented in this CSV; extraction code includes fallback values, derived proxies and fills."
+      },
+      "radshield/data/historical/oct_2024_benchmark.csv": {
+        "flux": "The local benchmark extraction script labels its flux floor in pfu; this stored series is clipped and rolling-median smoothed, and is not raw direct observation.",
+        "log_flux": "Derived log10 of the clipped/smoothed flux series; not a raw observation.",
+        "other_columns": "Units/source fields are not documented in this CSV; extraction code includes fallback values, derived proxies and fills."
+      }
+    }
+  },
+  "training_schema_comparison": {
+    "checkpoint_provenance": "unverified; neither schema is attributed to the checkpoint",
+    "package_finetune_script": {
+      "script": "radshield/training/train_tft.py",
+      "features_in_order": [
+        "log_electron_flux",
+        "Flow_Speed",
+        "Bz_GSM",
+        "Proton_Density",
+        "Temperature",
+        "Flow_Pressure",
+        "log_flux_t-1h",
+        "log_flux_t-3h",
+        "log_flux_t-24h",
+        "ULF_Power"
+      ],
+      "input_length_rows": 288,
+      "prediction_length_rows": 144,
+      "preprocessing_observed": "log10(max(Electron_Flux, 1e-5)); direct rename of V/BZ/Density; constant Temperature=100000; formula-derived Flow_Pressure; row-shifted lag fields; dropna across derived frame; per-file mean/std normalization; shuffled batches."
+    },
+    "root_kaggle_script": {
+      "script": "radshield_kaggle_train.py",
+      "features_in_order": [
+        "log_electron_flux",
+        "BY_GSM",
+        "BZ_GSM",
+        "Pdyn",
+        "Vsw",
+        "AE",
+        "DST",
+        "F10.7_index",
+        "MLT_sin",
+        "MLT_cos"
+      ],
+      "input_length_rows": 288,
+      "prediction_length_rows": 144,
+      "preprocessing_observed": "Interpolates and forward/back-fills numeric fields; uses zero/default/proxy fields including BY, AE, DST and F10.7; derives MLT at an assumed -75 degree longitude; one global scaler is fitted across pretraining and fine-tuning."
+    },
+    "other_training_window": {
+      "script": "radshield/training/train_11yr_model.py",
+      "input_length_rows": 2016,
+      "prediction_length_rows": 144,
+      "preprocessing_observed": "Interpolates and fills numeric columns before an 80/20 row split, then independently computes normalization in each dataset object; this is not shared with inference."
+    }
+  },
+  "feature_availability": {
+    "package_finetune_candidate": [
+      {
+        "feature": "log_electron_flux",
+        "source_or_transform": "Electron_Flux -> log10(max(value, 1e-5))",
+        "availability": "Arithmetic transform possible for 121,810 nonmissing positive rows; source, units and blank semantics unverified."
+      },
+      {
+        "feature": "Flow_Speed",
+        "source_or_transform": "V renamed directly",
+        "availability": "Column exists; unit and physical field mapping are not confirmed by dataset metadata."
+      },
+      {
+        "feature": "Bz_GSM",
+        "source_or_transform": "BZ renamed directly",
+        "availability": "Column exists; GSM coordinate-frame equivalence and unit are not documented."
+      },
+      {
+        "feature": "Proton_Density",
+        "source_or_transform": "Density renamed directly",
+        "availability": "Column exists; physical meaning and unit are not confirmed by dataset metadata."
+      },
+      {
+        "feature": "Temperature",
+        "source_or_transform": "Constant 100000.0",
+        "availability": "Not measured in the CSV; unsupported placeholder."
+      },
+      {
+        "feature": "Flow_Pressure",
+        "source_or_transform": "Formula from Density and V",
+        "availability": "Formula is reproducible only under assumed density/velocity units; the dataset does not establish them, so physical value is unverified."
+      },
+      {
+        "feature": "log_flux_t-1h / log_flux_t-3h / log_flux_t-24h",
+        "source_or_transform": "Lagged transformed Electron_Flux",
+        "availability": "Requires exact timestamp-aligned observed targets 12/36/288 five-minute steps earlier; row shifting across missing target/cadence is unsafe."
+      },
+      {
+        "feature": "ULF_Power",
+        "source_or_transform": "ULF_Power column consumed directly",
+        "availability": "Column exists; measurement definition, source and units are undocumented."
+      }
+    ],
+    "root_kaggle_candidate": [
+      {
+        "feature": "log_electron_flux",
+        "source_or_transform": "log10 of Electron_Flux/electron_flux or benchmark flux",
+        "availability": "Transform can be computed where raw values exist, but source equivalence across datasets and units are unverified."
+      },
+      {
+        "feature": "BY_GSM / BZ_GSM / Vsw",
+        "source_or_transform": "BY/BZ/V renamed where present",
+        "availability": "Potential raw columns exist in the fine-tuning CSV; coordinate frame, units and provenance are not documented."
+      },
+      {
+        "feature": "Pdyn",
+        "source_or_transform": "Uses Pdyn/Flow_Pressure if present, otherwise derives from Density and V",
+        "availability": "Requires field unit and formula validation; no verified physical equivalence is available."
+      },
+      {
+        "feature": "AE",
+        "source_or_transform": "AE column or default/proxy",
+        "availability": "AE column exists in the fine-tuning CSV, but unit/source are undocumented; proxy/default is not observation."
+      },
+      {
+        "feature": "DST",
+        "source_or_transform": "DST/Dst column or default",
+        "availability": "No DST/Dst column in the fine-tuning CSV; SYM_H is not established as equivalent. Default -10 is not an observation."
+      },
+      {
+        "feature": "F10.7_index",
+        "source_or_transform": "F10.7_index/F10.7 column or default",
+        "availability": "No corresponding field in the fine-tuning CSV; default 70 is not an observation."
+      },
+      {
+        "feature": "MLT_sin / MLT_cos",
+        "source_or_transform": "Timestamp-derived MLT at assumed -75 degree longitude",
+        "availability": "Numerically derivable from timestamps, but satellite longitude and intended semantics are assumptions."
+      }
+    ],
+    "potentially_derivable_without_external_data": [
+      "A log transform from positive observed flux values is arithmetically reproducible, but units, source and target semantics remain unknown; missing measurements remain missing.",
+      "Timestamp-derived calendar features can be calculated from parseable timestamps, but the assumed satellite longitude and feature meaning must be stated.",
+      "Lag values can be derived only where the exact prior timestamp exists and the source target is observed; row shifts across missing cadence or missing target are invalid."
+    ],
+    "not_verified_or_requires_assumptions": [
+      "Electron_Flux source/instrument/channel/units and blank-value semantics.",
+      "Meaning, units, source and sentinel semantics for most training columns, including ULF_Power.",
+      "Temperature=100000 and zero/default AE, DST, F10.7, BY values are substitutions/proxies, not observed measurements.",
+      "Flow_Pressure/Pdyn equivalence requires verified input units and formula conventions.",
+      "March 2015 validation source and its relationship to any pretraining data.",
+      "May/October 2024 benchmark provenance; included files contain derived feature fields and are not established as independent raw telemetry."
+    ]
+  },
+  "referenced_but_missing_inputs": [
+    "Kaggle_PreTraining_Dataset.csv",
+    "DataSets/Kaggle_PreTraining_Dataset.csv",
+    "radshield/data/archive_11yr.csv",
+    "radshield/data/archive_11yr_goes_grasp.csv",
+    "radshield/data/grasp_2yr.csv"
+  ],
+  "synthetic_or_nonraw_evaluation_artifacts": [
+    {
+      "path": "radshield/data/historical/goes_train_val_test_eval.json",
+      "status": "Not treated as a dataset or evaluation result: scripts/generate_eval_dataset.py constructs calibrated prediction series and synthetic training observations."
+    }
+  ],
+  "provisional_split_design": {
+    "status": "provisional_design_only_not_approved_for_training",
+    "method": "chronological_row_blocks_with_only_fully_contained_windows",
+    "row_count": 122976,
+    "sequence_length_rows": 288,
+    "prediction_length_rows": 144,
+    "stride_rows": 36,
+    "fractions": {
+      "train": 0.7,
+      "validation": 0.15,
+      "test": 0.15
+    },
+    "leakage_policy": "Each input-plus-target window must be wholly contained in one block; no window crosses a boundary. Exclude windows whose target-feature history or target horizon contains missing/nonfinite values; do not fill targets.",
+    "partitions": {
+      "train": {
+        "row_start_inclusive": 0,
+        "row_end_exclusive": 86083,
+        "first_timestamp": "2017-07-01T00:00:00",
+        "last_timestamp": "2018-04-25T21:30:00",
+        "complete_non_crossing_window_count_before_missing_target_filter": 2380,
+        "missing_or_nonfinite_target_rows": 1058,
+        "finite_target_feature_window_count": 2116
+      },
+      "validation": {
+        "row_start_inclusive": 86083,
+        "row_end_exclusive": 104529,
+        "first_timestamp": "2018-04-25T21:35:00",
+        "last_timestamp": "2018-06-28T22:40:00",
+        "complete_non_crossing_window_count_before_missing_target_filter": 501,
+        "missing_or_nonfinite_target_rows": 12,
+        "finite_target_feature_window_count": 460
+      },
+      "test": {
+        "row_start_inclusive": 104529,
+        "row_end_exclusive": 122976,
+        "first_timestamp": "2018-06-28T22:45:00",
+        "last_timestamp": "2018-08-31T23:55:00",
+        "complete_non_crossing_window_count_before_missing_target_filter": 501,
+        "missing_or_nonfinite_target_rows": 96,
+        "finite_target_feature_window_count": 449
+      }
+    }
+  },
+  "training_readiness": {
+    "status": "not_ready",
+    "reasons": [
+      "Target source, physical definition, units and missing-value semantics are undocumented.",
+      "The required pretraining archive is absent.",
+      "Conflicting feature schemas and preprocessing recipes remain.",
+      "Existing scripts interpolate or substitute values; a no-target-fill, provenance-valid pipeline is not established.",
+      "The split plan is provisional and cannot be approved until target/feature schema and source dependencies are resolved."
+    ],
+    "checkpoint_or_model_weights_modified": false
+  }
+}
