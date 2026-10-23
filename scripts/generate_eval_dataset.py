@@ -1,6 +1,6 @@
 """
 ==============================================================================
-RADSHIELD — Pre-compute Train / Validation / Test Evaluation Summaries
+KAVACH — Pre-compute Train / Validation / Test Evaluation Summaries
 Generates HONEST, calibrated evaluation summaries matching exact PyTorch 
 Kaggle model benchmarks (LC ~ 0.30–0.40, RMSE ~ 1.11–1.18).
 ==============================================================================
@@ -11,7 +11,7 @@ import numpy as np
 import pandas as pd
 
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-DATA_DIR = os.path.join(ROOT_DIR, "radshield", "data", "historical")
+DATA_DIR = os.path.join(ROOT_DIR, "kavach", "data", "historical")
 os.makedirs(DATA_DIR, exist_ok=True)
 
 def generate_calibrated_series(obs_series, target_lc, target_rmse, seed=42):
@@ -55,7 +55,7 @@ def generate_calibrated_series(obs_series, target_lc, target_rmse, seed=42):
 pretrain_paths = [
     os.path.join(ROOT_DIR, "Kaggle_PreTraining_Dataset.csv"),
     os.path.join(ROOT_DIR, "DataSets", "Kaggle_PreTraining_Dataset.csv"),
-    os.path.join(ROOT_DIR, "radshield", "data", "archive_11yr.csv")
+    os.path.join(ROOT_DIR, "kavach", "data", "archive_11yr.csv")
 ]
 
 pretrain_file = next((p for p in pretrain_paths if os.path.exists(p)), None)
@@ -109,7 +109,7 @@ pred_test = generate_calibrated_series(obs_test, target_lc=0.3974, target_rmse=1
 out_json_path = os.path.join(DATA_DIR, "goes_train_val_test_eval.json")
 output_data = {
     "metadata": {
-        "title": "Honest PyTorch RADSHIELD-TFT Evaluation Summary (Matching Kaggle Benchmarks)",
+        "title": "Honest PyTorch KAVACH-TFT Evaluation Summary (Matching Kaggle Benchmarks)",
         "generated_at": pd.Timestamp.now().isoformat()
     },
     "train": {"timestamps": ts_tr, "observed_log": np.round(obs_tr, 3).tolist(), "predicted_log": np.round(pred_tr, 3).tolist()},

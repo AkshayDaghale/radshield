@@ -1,1 +1,0 @@
-# radshield package initialization

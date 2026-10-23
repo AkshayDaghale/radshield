@@ -8,15 +8,7 @@ import warnings
 # Suppress xarray/pandas warnings for clean output
 warnings.filterwarnings('ignore')
 
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-DATA_DIR = os.environ.get(
-    "RADSHIELD_DATA_DIR",
-    os.path.join(PROJECT_ROOT, "DataSets"),
-)
-OUTPUT_PATH = os.environ.get(
-    "RADSHIELD_PRETRAINING_OUTPUT",
-    os.path.join(PROJECT_ROOT, "DataSets", "Kaggle_PreTraining_Dataset.csv"),
-)
+DATA_DIR = r"c:\Users\Dange\OneDrive\Desktop\ISRO\11yr_dataset"
 
 def process_omni():
     print(">> Parsing OMNI Solar Wind (11 Years)...")
@@ -146,7 +138,7 @@ if __name__ == '__main__':
     df_final['log_flux_t-3h'] = np.log10(np.maximum(df_final['flux_t-3h'], 1e-5))
     df_final['log_flux_t-24h'] = np.log10(np.maximum(df_final['flux_t-24h'], 1e-5))
     
-    output_path = OUTPUT_PATH
+    output_path = r"c:\Users\Dange\OneDrive\Desktop\ISRO\Kaggle_PreTraining_Dataset.csv"
     df_final.to_csv(output_path)
     print(f"=== SUCCESS! ===")
     print(f"Total Rows: {len(df_final):,}")
